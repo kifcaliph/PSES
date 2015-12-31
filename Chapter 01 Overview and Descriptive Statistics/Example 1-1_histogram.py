@@ -6,6 +6,8 @@ x = np.array([6.1, 12.6, 34.7, 1.6, 18.8, 2.2, 3, 2.2, 5.6, 3.8, 2.2, 3.1, 1.3, 
 num_bins = 10
 
 plt.hist(x, num_bins, range=[0, 100], normed=0, facecolor='green', alpha=0.5)
+ymin, ymax = plt.ylim()
+plt.yticks ( np.arange(ymin, ymax+10, 10) )
 plt.xlabel('FundRsng')
 plt.ylabel('Frequency')
 plt.show()
